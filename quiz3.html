@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASTICASSIA ENTRANCE EXAM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .form-check-label {
+      margin-left: 5px;
+    }
+
+    button[type="button"] {
+      margin-top: 20px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="button"]:hover {
+      background-color: #0069d9;
+    }
+  </style>
+  <script>
+    function checkAnswer() {
+      var answer = document.querySelector('input[name="q1"]:checked').value;
+      if (answer === 'a') {
+        // Answer is correct, redirect to another quiz
+        window.location.href = 'quiz4.html';
+      } else {
+        // Answer is wrong, show fail screen
+        window.location.href = 'fail.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Asticassia School of Technology Entrance Exam 1</h1>
+    <form>
+      <div class="form-group">
+        <label for="q1">What was JavaScript's first name</label>
+        <div class="form-check">
+          	<input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+          	<label class="form-check-label" for="q1a">Mocha</label>
+        </div>
+        <div class="form-check">
+          	<input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+          	<label class="form-check-label" for="q1b">Earl Grey</label>
+        </div>
+        <div class="form-check">
+          	<input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+          	<label class="form-check-label" for="q1c">Cappucino</label>
+        </div>
+		<div class="form-check">
+			<input class="form-check-input" type="radio" name="q1" id="q1d" value="d">
+			<label class="form-check-label" for="q1d">Matcha</label>
+		  </div>
+      </div>
+      <button type="button" onclick="checkAnswer()">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
